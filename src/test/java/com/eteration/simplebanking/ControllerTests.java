@@ -6,6 +6,7 @@ import com.eteration.simplebanking.model.Account;
 import com.eteration.simplebanking.model.InsufficientBalanceException;
 import com.eteration.simplebanking.model.request.DepositTransactionRequest;
 import com.eteration.simplebanking.model.request.WithdrawalTransactionRequest;
+import com.eteration.simplebanking.model.response.AccountResponse;
 import com.eteration.simplebanking.services.AccountService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -83,7 +84,7 @@ class ControllerTests {
         Account account = new Account("Kerem Karaca", "17892");
 
         doReturn(account).when(service).findAccount("17892");
-        ResponseEntity<Account> result = controller.getAccount("17892");
+        ResponseEntity<AccountResponse> result = controller.getAccount("17892");
         verify(service, times(1)).findAccount("17892");
         assertEquals(account, result.getBody());
     }

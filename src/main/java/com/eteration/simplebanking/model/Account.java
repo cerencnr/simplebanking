@@ -18,7 +18,6 @@ public class Account {
     private String owner;
     private Double balance;
 
-
     public Account(String owner, String accountNumber) {
         this(owner, accountNumber, 0.0);
     }

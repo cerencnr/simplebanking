@@ -15,8 +15,9 @@ public class AccountController {
     private final AccountService accountService;
 
     @GetMapping("/{accountNumber}")
-    public AccountResponse getAccount(@PathVariable String accountNumber) {
-        return accountService.findAccount(accountNumber);
+    public ResponseEntity<AccountResponse> getAccount(@PathVariable String accountNumber) {
+        AccountResponse accountResponse = accountService.findAccount(accountNumber);
+        return ResponseEntity.ok(accountResponse);
     }
 
     @PostMapping("/{accountNumber}/credit")
