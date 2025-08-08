@@ -1,7 +1,7 @@
 # Simple Banking 
 
 This project includes swagger ui for easier access to controllers. 
-You will be automatically navigated to swagger UI when you visit `http://localhost:8085`.
+You will be automatically navigated to swagger UI when you visit `http://localhost:8080`.
 The IndexController you will see in swagger UI is for redirecting to swagger UI.
 You will not be needed to utilize it manually.
 
