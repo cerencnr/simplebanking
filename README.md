@@ -5,7 +5,9 @@ You will be automatically navigated to swagger UI when you visit `http://localho
 The IndexController you will see in swagger UI is for redirecting to swagger UI.
 You will not be needed to utilize it manually.
 
-This project uses PostgreSQL and you will be needing 3 tables in your local database 
+You need to create a local database that will be used to store the data.
+
+This project uses PostgreSQL, and it will create 3 tables in your local database 
 (dev's preference PGAdmin can be used):
 - `account` 
 (**account_number**: String, **balance**: double, **create_date**: OffsetDateTime, **owner**: String)
